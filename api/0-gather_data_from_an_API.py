@@ -8,7 +8,8 @@ from sys import argv
 
 if __name__ == "__main__":
     users = requests.get("https://jsonplaceholder.typicode.com/users")
-    tasks = requests.get(f"https://jsonplaceholder.typicode.com/users/{argv[1]}/todos")
+    tasks = requests.get(f"https://jsonplaceholder.typicode\
+.com/users/{argv[1]}/todos")
     for user in users.json():
         if user['id'] == int(argv[1]):
             us = user
