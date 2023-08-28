@@ -20,5 +20,5 @@ if __name__ == "__main__":
                    f'{task.get("title")}']
         Save.append(newTask)
     with open(f"{argv[1]}.csv", 'w') as file:
-        write = csv.writer(file)
+        write = csv.writer(file, quoting=csv.QUOTE_ALL)
         write.writerows(Save)
